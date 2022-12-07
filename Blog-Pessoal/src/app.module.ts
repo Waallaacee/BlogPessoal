@@ -41,6 +41,6 @@ import { UsuarioModule } from './usuario/usuario.module';
   ],
 
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule { }

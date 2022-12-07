@@ -1,11 +1,10 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import { ApiExcludeEndpoint } from "@nestjs/swagger"
+import { Controller, Get } from '@nestjs/common';
+import { Res } from '@nestjs/common/decorators';
+import { ApiExcludeEndpoint } from '@nestjs/swagger';
+
 
 @Controller()
 export class AppController {
-  getHello(): any {
-    throw new Error('Method not implemented.');
-  }
   constructor() {}
 
   @ApiExcludeEndpoint()
@@ -13,4 +12,5 @@ export class AppController {
   async redirect(@Res() resposta: any){
     return resposta.redirect('/swagger')
   }
+  
 }
